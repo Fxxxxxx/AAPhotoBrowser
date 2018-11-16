@@ -2,11 +2,11 @@
 - 项目地址：[AAPhotoBrowser](https://github.com/Fxxxxxx/AAPhotoBrowser)
 - 实现效果：**缩放动画，双击放大缩小，单击隐藏，长按回调**
 
-![ix3hh8.gif](https://s1.ax1x.com/2018/11/16/ix3hh8.gif)
+[![实现效果.gif](https://s1.ax1x.com/2018/11/16/ix3hh8.md.gif)](https://imgchr.com/i/ix3hh8)
 
 - 集成方式：
-  1. 项目原地址下载后，把AAPhotoBrowser文件夹拖入项目
-  2. Cocoapods   ```pod  'AAPhotoBrowser' ```
+  - 1.项目原地址下载后，把AAPhotoBrowser文件夹拖入项目
+  - 2.Cocoapods   ```pod  'AAPhotoBrowser' ```
 
 - 使用方式：
 显示：
