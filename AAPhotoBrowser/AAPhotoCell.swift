@@ -116,7 +116,7 @@ class AAPhotoCell: UICollectionViewCell {
         }, completionHandler: { (image, error, cacheType, url) in
             progressView.removeFromSuperview()
             if image != nil {
-                self.showImage(image!)
+                weakSelf?.showImage(image!)
             }
             
         })
