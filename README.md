@@ -2,7 +2,7 @@
 - 项目地址：[AAPhotoBrowser](https://github.com/Fxxxxxx/AAPhotoBrowser)
 - 实现效果：**缩放动画，双击放大缩小，单击隐藏，长按回调**
 
-![Nov-16-2018 14-47-54.gif](https://upload-images.jianshu.io/upload_images/3569202-8bafbff60a6fdfef.gif?imageMogr2/auto-orient/strip)
+![ix3hh8.gif](https://s1.ax1x.com/2018/11/16/ix3hh8.gif)
 
 - 集成方式：
   1. 项目原地址下载后，把AAPhotoBrowser文件夹拖入项目
