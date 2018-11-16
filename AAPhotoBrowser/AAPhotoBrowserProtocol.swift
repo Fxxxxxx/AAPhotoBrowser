@@ -6,6 +6,7 @@
 //  Copyright © 2018 Fxxx. All rights reserved.
 //
 
+import Foundation
 
 @objc public protocol AAPhotoBrowserProtocol {
     
