@@ -21,7 +21,7 @@ public final class AAPhoto: NSObject {
         self.originalView = originalView
     }
     
-    public init(urlString: String, placeholderImage: UIImage, originalView: UIImageView? = nil) {
+    public init(urlString: String, placeholderImage: UIImage? = nil, originalView: UIImageView? = nil) {
         super.init()
         self.urlString = urlString
         self.placeholderImage = placeholderImage

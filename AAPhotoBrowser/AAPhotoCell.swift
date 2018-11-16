@@ -15,6 +15,7 @@ class AAPhotoCell: UICollectionViewCell {
     var imageView: UIImageView!
     weak var browser: AAPhotoBrowser?
     private var firstTouch: CGPoint?
+    private var photo: AAPhoto!
     var index: Int = 0
     
     required init?(coder aDecoder: NSCoder) {
@@ -88,21 +89,20 @@ class AAPhotoCell: UICollectionViewCell {
     
     func setPhoto(photo: AAPhoto) {
         
+        self.photo = photo
         scrollView.contentSize = CGSize.zero
         scrollView.zoomScale = 1.0
         imageView.frame = UIScreen.main.bounds
         imageView.image = nil
         
         guard photo.image == nil else {
-            imageView.image = photo.image
-            imageView.frame = imageView.fitRect()
+            showImage(photo.image!)
             return
         }
         
         let placeHolder = photo.placeholderImage != nil ? photo.placeholderImage! : photo.originalView?.image
         if placeHolder != nil {
-            imageView.image = placeHolder
-            imageView.frame = imageView.fitRect()
+            showImage(placeHolder!)
         }
         
         guard photo.urlString != nil else {
@@ -124,14 +124,24 @@ class AAPhotoCell: UICollectionViewCell {
         
     }
     
+    func showImage(_ image: UIImage) {
+        
+        imageView.image = photo.image
+        imageView.frame = imageView.fitRect()
+        let mode = photo.originalView?.contentMode
+        if mode != nil && mode != imageView.contentMode {
+            imageView.contentMode = mode!
+        }
+        
+    }
+    
     @objc func doubleTapAction() {
         let scale: CGFloat = scrollView.zoomScale < 2.0 ? 2.0 : 1.0
         scrollView.setZoomScale(scale, animated: true)
     }
     
     @objc func tapAction() {
-        browser?.dismiss(animated: true, completion: nil)
-        browser = nil
+        dissmissAction()
     }
     
     @objc func pacAction(pan: UIPanGestureRecognizer) {
@@ -144,7 +154,7 @@ class AAPhotoCell: UICollectionViewCell {
         let scale = 1.0 - abs(translation.y) / AAscreenH
         browser?.view.backgroundColor = UIColor.init(white: 0, alpha: scale)
         
-        let fitRect = UIScreen.main.bounds
+        let fitRect = imageView.fitRect()
         let size = CGSize.init(width: fitRect.size.width * scale, height: fitRect.size.height * scale)
         let center = CGPoint.init(x: AAscreenW / 2 + translation.x, y: AAscreenH / 2 + translation.y)
         let origin = CGPoint.init(x: center.x - size.width / 2, y: center.y - size.height / 2)
@@ -157,7 +167,7 @@ class AAPhotoCell: UICollectionViewCell {
         if pan.state == .ended || pan.state == .failed || pan.state == .cancelled {
             
             guard scale > 0.75 else {
-                browser?.dismiss(animated: true, completion: nil)
+                dissmissAction()
                 return
             }
             UIView.animate(withDuration: 0.3) {
@@ -174,6 +184,13 @@ class AAPhotoCell: UICollectionViewCell {
             return
         }
         browser?.delegate.didLongPressPhoto?(at: index, with: browser!)
+        
+    }
+    
+    func dissmissAction() {
+        
+        browser?.dismiss(animated: true, completion: nil)
+        browser = nil
         
     }
     
@@ -214,7 +231,7 @@ extension AAPhotoCell: UIGestureRecognizerDelegate {
 
 extension UIImageView {
     
-    func fitRect(with now: CGRect = UIScreen.main.bounds ) -> CGRect {
+    func fitRect() -> CGRect {
         
         guard self.image != nil else {
             return UIScreen.main.bounds
@@ -223,18 +240,17 @@ extension UIImageView {
         let imageSize = self.image!.size
         let whRate = imageSize.width / imageSize.height
         let rateScreen = AAscreenW / AAscreenH
-        let center = CGPoint.init(x: now.midX, y: now.midY)
         if whRate < rateScreen {
             
-            let h = now.height
+            let h = AAscreenH
             let w = h * whRate
-            return CGRect.init(x: center.x - w / 2.0, y: center.y - h / 2.0, width: w, height: h)
+            return CGRect.init(x: (AAscreenW - w) / 2.0, y: 0, width: w, height: h)
             
         } else {
             
-            let w = now.width
+            let w = AAscreenW
             let h = w / whRate
-            return CGRect.init(x: center.x - w / 2.0, y: center.y - h / 2.0, width: w, height: h)
+            return CGRect.init(x: 0, y: (AAscreenH - h) / 2.0, width: w, height: h)
             
         }
         

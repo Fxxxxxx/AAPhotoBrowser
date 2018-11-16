@@ -100,7 +100,6 @@ extension AATransitioningDelegate: UIViewControllerAnimatedTransitioning {
         
         let cell = fromCtr.collectionView.cellForItem(at: IndexPath.init(item: fromCtr.selectedIndex, section: 0)) as! AAPhotoCell
         let showView = cell.imageView!
-        showView.contentMode = originalView!.contentMode
         transitionContext.containerView.addSubview(showView)
         let newRect = originalView!.convert(originalView!.frame, to: transitionContext.containerView)
         UIView.animate(withDuration: fromCtr.dissmissDuration, animations: {
