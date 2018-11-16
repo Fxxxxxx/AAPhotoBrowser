@@ -12,12 +12,6 @@
 		30F35AA0219EA92C007348E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F35A9E219EA92C007348E8 /* Main.storyboard */; };
 		30F35AA2219EA930007348E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F35AA1219EA930007348E8 /* Assets.xcassets */; };
 		30F35AA5219EA930007348E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F35AA3219EA930007348E8 /* LaunchScreen.storyboard */; };
-		30F35AB3219EA959007348E8 /* AACircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AAD219EA959007348E8 /* AACircleProgressView.swift */; };
-		30F35AB4219EA959007348E8 /* AATransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AAE219EA959007348E8 /* AATransitioningDelegate.swift */; };
-		30F35AB5219EA959007348E8 /* AAPhotoBrowserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AAF219EA959007348E8 /* AAPhotoBrowserProtocol.swift */; };
-		30F35AB6219EA959007348E8 /* AAPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AB0219EA959007348E8 /* AAPhotoCell.swift */; };
-		30F35AB7219EA959007348E8 /* AAPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AB1219EA959007348E8 /* AAPhoto.swift */; };
-		30F35AB8219EA959007348E8 /* AAPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AB2219EA959007348E8 /* AAPhotoBrowser.swift */; };
 		30F35ABA219EAA23007348E8 /* AACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AB9219EAA23007348E8 /* AACell.swift */; };
 		30F35AD4219EABF4007348E8 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35ABC219EABF4007348E8 /* ImageCache.swift */; };
 		30F35AD5219EABF4007348E8 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35ABD219EABF4007348E8 /* ThreadHelper.swift */; };
@@ -51,6 +45,12 @@
 		30F35AFB219EAE72007348E8 /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 30F35AF2219EAE72007348E8 /* 5.jpeg */; };
 		30F35AFC219EAE72007348E8 /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 30F35AF3219EAE72007348E8 /* 2.jpeg */; };
 		30F35AFD219EAE72007348E8 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 30F35AF4219EAE72007348E8 /* 3.jpeg */; };
+		30F35B05219EB6C4007348E8 /* AACircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35AFF219EB6C3007348E8 /* AACircleProgressView.swift */; };
+		30F35B06219EB6C4007348E8 /* AATransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35B00219EB6C3007348E8 /* AATransitioningDelegate.swift */; };
+		30F35B07219EB6C4007348E8 /* AAPhotoBrowserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35B01219EB6C3007348E8 /* AAPhotoBrowserProtocol.swift */; };
+		30F35B08219EB6C4007348E8 /* AAPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35B02219EB6C3007348E8 /* AAPhotoCell.swift */; };
+		30F35B09219EB6C4007348E8 /* AAPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35B03219EB6C3007348E8 /* AAPhoto.swift */; };
+		30F35B0A219EB6C4007348E8 /* AAPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F35B04219EB6C3007348E8 /* AAPhotoBrowser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,12 +61,6 @@
 		30F35AA1219EA930007348E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30F35AA4219EA930007348E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30F35AA6219EA930007348E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30F35AAD219EA959007348E8 /* AACircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AACircleProgressView.swift; sourceTree = "<group>"; };
-		30F35AAE219EA959007348E8 /* AATransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AATransitioningDelegate.swift; sourceTree = "<group>"; };
-		30F35AAF219EA959007348E8 /* AAPhotoBrowserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhotoBrowserProtocol.swift; sourceTree = "<group>"; };
-		30F35AB0219EA959007348E8 /* AAPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhotoCell.swift; sourceTree = "<group>"; };
-		30F35AB1219EA959007348E8 /* AAPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhoto.swift; sourceTree = "<group>"; };
-		30F35AB2219EA959007348E8 /* AAPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhotoBrowser.swift; sourceTree = "<group>"; };
 		30F35AB9219EAA23007348E8 /* AACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AACell.swift; sourceTree = "<group>"; };
 		30F35ABC219EABF4007348E8 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		30F35ABD219EABF4007348E8 /* ThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
@@ -101,6 +95,12 @@
 		30F35AF2219EAE72007348E8 /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = "<group>"; };
 		30F35AF3219EAE72007348E8 /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = "<group>"; };
 		30F35AF4219EAE72007348E8 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		30F35AFF219EB6C3007348E8 /* AACircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AACircleProgressView.swift; sourceTree = "<group>"; };
+		30F35B00219EB6C3007348E8 /* AATransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AATransitioningDelegate.swift; sourceTree = "<group>"; };
+		30F35B01219EB6C3007348E8 /* AAPhotoBrowserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhotoBrowserProtocol.swift; sourceTree = "<group>"; };
+		30F35B02219EB6C3007348E8 /* AAPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhotoCell.swift; sourceTree = "<group>"; };
+		30F35B03219EB6C3007348E8 /* AAPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhoto.swift; sourceTree = "<group>"; };
+		30F35B04219EB6C3007348E8 /* AAPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPhotoBrowser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 		30F35A99219EA92C007348E8 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				30F35AAC219EA959007348E8 /* AAPhotoBrowser */,
+				30F35AFE219EB6C3007348E8 /* AAPhotoBrowser */,
 				30F35ABB219EABF4007348E8 /* Kingfisher */,
 				30F35AEB219EAE72007348E8 /* media */,
 				30F35A9A219EA92C007348E8 /* AppDelegate.swift */,
@@ -145,20 +145,6 @@
 				30F35AA6219EA930007348E8 /* Info.plist */,
 			);
 			path = Demo;
-			sourceTree = "<group>";
-		};
-		30F35AAC219EA959007348E8 /* AAPhotoBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				30F35AAD219EA959007348E8 /* AACircleProgressView.swift */,
-				30F35AAE219EA959007348E8 /* AATransitioningDelegate.swift */,
-				30F35AAF219EA959007348E8 /* AAPhotoBrowserProtocol.swift */,
-				30F35AB0219EA959007348E8 /* AAPhotoCell.swift */,
-				30F35AB1219EA959007348E8 /* AAPhoto.swift */,
-				30F35AB2219EA959007348E8 /* AAPhotoBrowser.swift */,
-			);
-			name = AAPhotoBrowser;
-			path = ../../AAPhotoBrowser;
 			sourceTree = "<group>";
 		};
 		30F35ABB219EABF4007348E8 /* Kingfisher */ = {
@@ -206,6 +192,19 @@
 				30F35AF4219EAE72007348E8 /* 3.jpeg */,
 			);
 			path = media;
+			sourceTree = "<group>";
+		};
+		30F35AFE219EB6C3007348E8 /* AAPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				30F35AFF219EB6C3007348E8 /* AACircleProgressView.swift */,
+				30F35B00219EB6C3007348E8 /* AATransitioningDelegate.swift */,
+				30F35B01219EB6C3007348E8 /* AAPhotoBrowserProtocol.swift */,
+				30F35B02219EB6C3007348E8 /* AAPhotoCell.swift */,
+				30F35B03219EB6C3007348E8 /* AAPhoto.swift */,
+				30F35B04219EB6C3007348E8 /* AAPhotoBrowser.swift */,
+			);
+			path = AAPhotoBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F35ADB219EABF4007348E8 /* CacheSerializer.swift in Sources */,
+				30F35B09219EB6C4007348E8 /* AAPhoto.swift in Sources */,
 				30F35AE4219EABF4007348E8 /* AnimatedImageView.swift in Sources */,
+				30F35B08219EB6C4007348E8 /* AAPhotoCell.swift in Sources */,
+				30F35B06219EB6C4007348E8 /* AATransitioningDelegate.swift in Sources */,
 				30F35AE7219EABF4007348E8 /* Filter.swift in Sources */,
 				30F35AD5219EABF4007348E8 /* ThreadHelper.swift in Sources */,
 				30F35AE5219EABF4007348E8 /* String+MD5.swift in Sources */,
@@ -298,7 +300,6 @@
 				30F35A9D219EA92C007348E8 /* ViewController.swift in Sources */,
 				30F35AE0219EABF4007348E8 /* ImageModifier.swift in Sources */,
 				30F35AE3219EABF4007348E8 /* ImageTransition.swift in Sources */,
-				30F35AB7219EA959007348E8 /* AAPhoto.swift in Sources */,
 				30F35AE8219EABF4007348E8 /* Placeholder.swift in Sources */,
 				30F35AD9219EABF4007348E8 /* Image.swift in Sources */,
 				30F35ADE219EABF4007348E8 /* ImageDownloader.swift in Sources */,
@@ -306,20 +307,18 @@
 				30F35AE9219EABF4007348E8 /* KingfisherOptionsInfo.swift in Sources */,
 				30F35ADC219EABF4007348E8 /* UIButton+Kingfisher.swift in Sources */,
 				30F35AD7219EABF4007348E8 /* RequestModifier.swift in Sources */,
+				30F35B05219EB6C4007348E8 /* AACircleProgressView.swift in Sources */,
 				30F35ADA219EABF4007348E8 /* Indicator.swift in Sources */,
-				30F35AB5219EA959007348E8 /* AAPhotoBrowserProtocol.swift in Sources */,
 				30F35ABA219EAA23007348E8 /* AACell.swift in Sources */,
 				30F35AE6219EABF4007348E8 /* ImageProcessor.swift in Sources */,
 				30F35ADD219EABF4007348E8 /* Resource.swift in Sources */,
-				30F35AB6219EA959007348E8 /* AAPhotoCell.swift in Sources */,
 				30F35ADF219EABF4007348E8 /* Box.swift in Sources */,
 				30F35A9B219EA92C007348E8 /* AppDelegate.swift in Sources */,
 				30F35AE2219EABF4007348E8 /* FormatIndicatedCacheSerializer.swift in Sources */,
 				30F35AEA219EABF4007348E8 /* ImagePrefetcher.swift in Sources */,
-				30F35AB4219EA959007348E8 /* AATransitioningDelegate.swift in Sources */,
 				30F35AD6219EABF4007348E8 /* Kingfisher.swift in Sources */,
-				30F35AB3219EA959007348E8 /* AACircleProgressView.swift in Sources */,
-				30F35AB8219EA959007348E8 /* AAPhotoBrowser.swift in Sources */,
+				30F35B07219EB6C4007348E8 /* AAPhotoBrowserProtocol.swift in Sources */,
+				30F35B0A219EB6C4007348E8 /* AAPhotoBrowser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
