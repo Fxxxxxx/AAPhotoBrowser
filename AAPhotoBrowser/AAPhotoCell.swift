@@ -116,8 +116,7 @@ class AAPhotoCell: UICollectionViewCell {
         }, completionHandler: { (image, error, cacheType, url) in
             progressView.removeFromSuperview()
             if image != nil {
-                weakSelf?.imageView.image = image
-                weakSelf?.imageView.frame = self.imageView.fitRect()
+                self.showImage(image!)
             }
             
         })
@@ -126,7 +125,7 @@ class AAPhotoCell: UICollectionViewCell {
     
     func showImage(_ image: UIImage) {
         
-        imageView.image = photo.image
+        imageView.image = image
         imageView.frame = imageView.fitRect()
         let mode = photo.originalView?.contentMode
         if mode != nil && mode != imageView.contentMode {
