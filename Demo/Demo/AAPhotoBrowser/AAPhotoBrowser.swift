@@ -21,8 +21,6 @@ public class AAPhotoBrowser: UIViewController {
     private var pageControl: UIPageControl!
     private let transDelegate = AATransitioningDelegate()
     
-    private var draggingX: CGFloat = 0.0
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -47,7 +45,10 @@ public class AAPhotoBrowser: UIViewController {
         layout.itemSize = UIScreen.main.bounds.size
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10
-        collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: layout)
+        var frame = UIScreen.main.bounds
+        frame.size.width += 10.0
+        collectionView = UICollectionView.init(frame: frame, collectionViewLayout: layout)
+        collectionView.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 10.0)
         collectionView.register(AAPhotoCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -103,22 +104,18 @@ extension AAPhotoBrowser: UICollectionViewDataSource, UICollectionViewDelegate {
         
     }
     
-    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        draggingX = scrollView.contentOffset.x
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        let page = Int(scrollView.contentOffset.x / (AAscreenW + 10))
+        pageControl.currentPage = page
+        
     }
     
-    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        let fix: CGFloat = draggingX < scrollView.contentOffset.x ? 0.98 : 0.02
-        var page = Int(scrollView.contentOffset.x / (AAscreenW + 10) + fix)
-        let photos = self.delegate.numberOfPhotos(with: self) - 1
-        page = page > photos ? photos : page
+        let page = Int(scrollView.contentOffset.x / (AAscreenW + 10))
         selectedIndex = page
         pageControl.currentPage = selectedIndex
-        
-        let x = (AAscreenW + 10.0) * CGFloat(page)
-        scrollView.setContentOffset(CGPoint.init(x: x, y: 0), animated: true)
-        
         delegate.didDisplayPhoto?(at: page, with: self)
         
     }
