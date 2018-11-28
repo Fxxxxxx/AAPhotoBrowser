@@ -108,11 +108,16 @@ class AAPhotoCell: UICollectionViewCell {
             return
         }
         
+        let view = self.contentView.viewWithTag(111)
+        view?.removeFromSuperview()
+        
         let progressView = AACircleProgressView.init(in: self.contentView)
+        progressView.tag = 111
         weak var weakSelf = self
         KingfisherManager.shared.retrieveImage(with: URL.init(string: photo.urlString!)!, options: nil, progressBlock: { (receivedSize, totalSize) in
             progressView.setProgress(progress: Float(receivedSize / totalSize))
         }, completionHandler: { (image, error, cacheType, url) in
+            
             progressView.removeFromSuperview()
             if image != nil {
                 weakSelf?.showImage(image!)
