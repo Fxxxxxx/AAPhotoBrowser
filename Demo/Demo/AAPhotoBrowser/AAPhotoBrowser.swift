@@ -18,7 +18,7 @@ public class AAPhotoBrowser: UIViewController {
     public var dissmissDuration: TimeInterval = 0.3         //隐藏动画时间
     public var selectedIndex = 0                            //当前显示图片的序号
     var collectionView: UICollectionView!
-    private var pageControl: UIPageControl!
+    public var pageControl: UIPageControl!
     private let transDelegate = AATransitioningDelegate()
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,7 +59,7 @@ public class AAPhotoBrowser: UIViewController {
         self.view.addSubview(collectionView)
         collectionView.selectItem(at: IndexPath.init(item: selectedIndex, section: 0), animated: false, scrollPosition: .left)
         
-        pageControl = UIPageControl.init(frame: CGRect.init(x: 0, y: AAscreenH - 50, width: AAscreenW, height: 20))
+        pageControl = UIPageControl.init(frame: CGRect.init(x: 0, y: AAscreenH - 30, width: AAscreenW, height: 20))
         pageControl.numberOfPages = self.delegate.numberOfPhotos(with: self)
         pageControl.currentPage = selectedIndex
         pageControl.isUserInteractionEnabled = false
