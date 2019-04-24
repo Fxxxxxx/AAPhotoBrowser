@@ -68,7 +68,7 @@ extension AATransitioningDelegate: UIViewControllerAnimatedTransitioning {
         let blackView = UIView.init(frame: UIScreen.main.bounds)
         blackView.backgroundColor = UIColor.black
         transitionContext.containerView.addSubview(blackView)
-        let newRect = originalView!.convert(originalView!.frame, to: transitionContext.containerView)
+        let newRect = originalView!.convert(originalView!.bounds, to: nil)
         let imageView = UIImageView.init(frame: newRect)
         imageView.image = originalView?.image!
         imageView.contentMode = originalView!.contentMode
@@ -101,7 +101,7 @@ extension AATransitioningDelegate: UIViewControllerAnimatedTransitioning {
         let cell = fromCtr.collectionView.cellForItem(at: IndexPath.init(item: fromCtr.selectedIndex, section: 0)) as! AAPhotoCell
         let showView = cell.imageView!
         transitionContext.containerView.addSubview(showView)
-        let newRect = originalView!.convert(originalView!.frame, to: transitionContext.containerView)
+        let newRect = originalView!.convert(originalView!.bounds, to: nil)
         UIView.animate(withDuration: fromCtr.dissmissDuration, animations: {
             
             showView.frame = newRect
