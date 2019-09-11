@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import AALRUCache
 
 let AAscreenW = UIScreen.main.bounds.size.width
 let AAscreenH = UIScreen.main.bounds.size.height
 
 public class AAPhotoBrowser: UIViewController {
+    
+    private let cache = AALRUCache<Int, AAPhoto>.init(20)
     
     public weak var delegate: AAPhotoBrowserProtocol!
     public var presentDuration: TimeInterval = 0.3          //显示动画时间
@@ -95,13 +98,16 @@ extension AAPhotoBrowser: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+        var photo = cache[indexPath.item]
+        if photo == nil {
+            photo = self.delegate.photo(of: indexPath.item, with: self)
+            cache[indexPath.item] = photo
+        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! AAPhotoCell
-        cell.setPhoto(photo: self.delegate.photo(of: indexPath.item, with: self))
+        cell.setPhoto(photo: photo!)
         cell.index = indexPath.item
         cell.browser = self
         return cell
-        
     }
     
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {

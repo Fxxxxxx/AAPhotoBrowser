@@ -1,0 +1,6 @@
+framework module AALRUCache {
+  umbrella header "AALRUCache-umbrella.h"
+
+  export *
+  module * { export * }
+}

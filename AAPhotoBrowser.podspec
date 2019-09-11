@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "AAPhotoBrowser"
-s.version      = "1.2.0"
+s.version      = "1.2.1"
 s.summary      = "iOS 类似微信朋友圈样式的图片浏览器"
 
 s.homepage     = "https://github.com/Fxxxxxx/AAPhotoBrowser"
@@ -21,6 +21,7 @@ s.source_files  = "AAPhotoBrowser/*.swift"
 
 s.requires_arc = true
 s.framework = "UIKit"
-s.dependency   'Kingfisher'
+s.dependency 'Kingfisher'
+s.dependency 'AALRUCache'
 
 end
