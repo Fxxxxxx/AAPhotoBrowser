@@ -29,13 +29,11 @@ public class AAPhotoBrowser: UIViewController {
     }
     
     public init(with delegate: AAPhotoBrowserProtocol) {
-        
         super.init(nibName: nil, bundle: nil)
         self.delegate = delegate
         self.transitioningDelegate = transDelegate
-        self.modalPresentationStyle = .overCurrentContext
+        self.modalPresentationStyle = .overFullScreen
         self.modalTransitionStyle = .crossDissolve
-        
     }
     
     override public func viewDidLoad() {
